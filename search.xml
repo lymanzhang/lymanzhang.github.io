@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>newStep</title>
-    <url>/2021/05/22/newStep/</url>
-    <content><![CDATA[<h1 id="不重构，无未来：拥抱数据驱动的智能-新时代"><a href="#不重构，无未来：拥抱数据驱动的智能-新时代" class="headerlink" title="不重构，无未来：拥抱数据驱动的智能+新时代"></a>不重构，无未来：拥抱数据驱动的智能+新时代</h1><p>伴随着<strong>新一代信息通信技术</strong>（以互联网、大数据、人工智能、5G为代表）的持续创新和渗透扩散，新一轮工业革命正在全球范围孕育兴起，制造业正迈向<strong>体系重构</strong>、<strong>动力变革</strong>、<strong>范式迁移</strong>的新阶段，加速向<strong>数字化</strong>、<strong>网络化</strong>、<strong>智能化</strong>方向延伸扩展，<strong>万物互联</strong>、<strong>数据驱动</strong>、<strong>软件定义</strong>、<strong>平台支撑</strong>、<strong>组织重构</strong>、<strong>智能主导</strong>正在构建制造业的新体系，它也成为了全球新一轮产业竞争的制高点。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2021/05/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -22,6 +16,12 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>newStep</title>
+    <url>/2021/05/22/newStep/</url>
+    <content><![CDATA[<h1 id="不重构，无未来：拥抱数据驱动的智能-新时代"><a href="#不重构，无未来：拥抱数据驱动的智能-新时代" class="headerlink" title="不重构，无未来：拥抱数据驱动的智能+新时代"></a>不重构，无未来：拥抱数据驱动的智能+新时代</h1><p>伴随着<strong>新一代信息通信技术</strong>（以互联网、大数据、人工智能、5G为代表）的持续创新和渗透扩散，新一轮工业革命正在全球范围孕育兴起，制造业正迈向<strong>体系重构</strong>、<strong>动力变革</strong>、<strong>范式迁移</strong>的新阶段，加速向<strong>数字化</strong>、<strong>网络化</strong>、<strong>智能化</strong>方向延伸扩展，<strong>万物互联</strong>、<strong>数据驱动</strong>、<strong>软件定义</strong>、<strong>平台支撑</strong>、<strong>组织重构</strong>、<strong>智能主导</strong>正在构建制造业的新体系，它也成为了全球新一轮产业竞争的制高点。</p>
 ]]></content>
   </entry>
   <entry>
@@ -49,7 +49,7 @@
 <li></li>
 <li><h3 id="赠礼包装"><a href="#赠礼包装" class="headerlink" title="赠礼包装"></a>赠礼包装</h3></li>
 </ul>
-<h2 id="二、配套设施"><a href="#二、配套设施" class="headerlink" title="二、配套设施"></a>二、配套设施</h2><h3 id="1-图像输出设备："><a href="#1-图像输出设备：" class="headerlink" title="1-图像输出设备："></a>1-图像输出设备：</h3><h4 id="OKI-C711WTA3-全新-彩色-白色-光油打印机"><a href="#OKI-C711WTA3-全新-彩色-白色-光油打印机" class="headerlink" title="OKI C711WTA3 全新 彩色+白色+光油打印机"></a>OKI C711WTA3 全新 彩色+白色+光油打印机</h4><p><img src="D:+研发笔记+\TB27o9VrctnpuFjSZFKXXalFFXa_!!3203323955.jpg" alt="img"></p>
+<h2 id="二、配套设施"><a href="#二、配套设施" class="headerlink" title="二、配套设施"></a>二、配套设施</h2><h3 id="1-图像输出设备："><a href="#1-图像输出设备：" class="headerlink" title="1-图像输出设备："></a>1-图像输出设备：</h3><h4 id="OKI-C711WTA3-全新-彩色-白色-光油打印机"><a href="#OKI-C711WTA3-全新-彩色-白色-光油打印机" class="headerlink" title="OKI C711WTA3 全新 彩色+白色+光油打印机"></a>OKI C711WTA3 全新 彩色+白色+光油打印机</h4><p><img src="/.io//TB27o9VrctnpuFjSZFKXXalFFXa_!!3203323955.jpg" alt="img"></p>
 <h4 id="设备价格："><a href="#设备价格：" class="headerlink" title="设备价格："></a>设备价格：</h4><ul>
 <li>￥30800.00 税17%另计，供货单位/价格来源：OKI商业伙伴上海展示厅。</li>
 </ul>
@@ -109,7 +109,7 @@
   <entry>
     <title>基于水转印工艺的图案设计及配套设施</title>
     <url>/2021/05/22/%E8%91%AB%E8%8A%A6%E6%B0%B4%E8%BD%AC%E5%8D%B0%E5%AE%9A%E5%BD%A9/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="基于水转印工艺的图案设计及配套设施"><a href="#基于水转印工艺的图案设计及配套设施" class="headerlink" title="基于水转印工艺的图案设计及配套设施"></a>基于水转印工艺的图案设计及配套设施</h1><h2 id="一、图案设计"><a href="#一、图案设计" class="headerlink" title="一、图案设计"></a>一、图案设计</h2><h3 id="1-葫芦表面造型图案设计"><a href="#1-葫芦表面造型图案设计" class="headerlink" title="1-葫芦表面造型图案设计"></a>1-葫芦表面造型图案设计</h3><p>图案强化数字化特点；采用原始素材的数字化重构和计算生成等方式创建图像内容。</p>
+    <content><![CDATA[<h1 id><a href="#" class="headerlink" title></a></h1><h1 id="基于水转印工艺的图案设计及配套设施"><a href="#基于水转印工艺的图案设计及配套设施" class="headerlink" title="基于水转印工艺的图案设计及配套设施"></a>基于水转印工艺的图案设计及配套设施</h1><h2 id="一、图案设计"><a href="#一、图案设计" class="headerlink" title="一、图案设计"></a>一、图案设计</h2><h3 id="1-葫芦表面造型图案设计"><a href="#1-葫芦表面造型图案设计" class="headerlink" title="1-葫芦表面造型图案设计"></a>1-葫芦表面造型图案设计</h3><p>图案强化数字化特点；采用原始素材的数字化重构和计算生成等方式创建图像内容。</p>
 <ul>
 <li><h4 id="建党一百年献礼葫芦"><a href="#建党一百年献礼葫芦" class="headerlink" title="建党一百年献礼葫芦"></a>建党一百年献礼葫芦</h4><ul>
 <li>一百名杰出党员：人物头像+语录+生平</li>
@@ -131,7 +131,7 @@
 <li></li>
 <li><h3 id="赠礼包装"><a href="#赠礼包装" class="headerlink" title="赠礼包装"></a>赠礼包装</h3></li>
 </ul>
-<h2 id="二、配套设施"><a href="#二、配套设施" class="headerlink" title="二、配套设施"></a>二、配套设施</h2><h3 id="1-图像输出设备："><a href="#1-图像输出设备：" class="headerlink" title="1-图像输出设备："></a>1-图像输出设备：</h3><h4 id="OKI-C711WTA3-全新-彩色-白色-光油打印机"><a href="#OKI-C711WTA3-全新-彩色-白色-光油打印机" class="headerlink" title="OKI C711WTA3 全新 彩色+白色+光油打印机"></a>OKI C711WTA3 全新 彩色+白色+光油打印机</h4><p><img src="D:+研发笔记+\TB27o9VrctnpuFjSZFKXXalFFXa_!!3203323955.jpg" alt="img"></p>
+<h2 id="二、配套设施"><a href="#二、配套设施" class="headerlink" title="二、配套设施"></a>二、配套设施</h2><h3 id="1-图像输出设备："><a href="#1-图像输出设备：" class="headerlink" title="1-图像输出设备："></a>1-图像输出设备：</h3><h4 id="OKI-C711WTA3-全新-彩色-白色-光油打印机"><a href="#OKI-C711WTA3-全新-彩色-白色-光油打印机" class="headerlink" title="OKI C711WTA3 全新 彩色+白色+光油打印机"></a>OKI C711WTA3 全新 彩色+白色+光油打印机</h4><p><img src="/.io//TB27o9VrctnpuFjSZFKXXalFFXa_!!3203323955.jpg" alt="img"></p>
 <h4 id="设备价格："><a href="#设备价格：" class="headerlink" title="设备价格："></a>设备价格：</h4><ul>
 <li>￥30800.00 税17%另计，供货单位/价格来源：OKI商业伙伴上海展示厅。</li>
 </ul>
