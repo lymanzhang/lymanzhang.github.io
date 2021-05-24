@@ -6,7 +6,7 @@
   <link href="https://lymanzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://lymanzhang.github.io/"/>
-  <updated>2021-05-22T15:18:06.011Z</updated>
+  <updated>2021-05-24T14:32:42.719Z</updated>
   <id>https://lymanzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testImageInsert</title>
+    <link href="https://lymanzhang.github.io/2021/05/24/testImageInsert/"/>
+    <id>https://lymanzhang.github.io/2021/05/24/testImageInsert/</id>
+    <published>2021-05-24T14:25:39.000Z</published>
+    <updated>2021-05-24T14:32:42.719Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="管理图像"><a href="#管理图像" class="headerlink" title="管理图像"></a>管理图像</h3><p>本文主要是尝试一下如何管理图像</p><p><img src="/.io//%E8%A2%81%E9%9A%86%E5%B9%B3.PNG"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;管理图像&quot;&gt;&lt;a href=&quot;#管理图像&quot; class=&quot;headerlink&quot; title=&quot;管理图像&quot;&gt;&lt;/a&gt;管理图像&lt;/h3&gt;&lt;p&gt;本文主要是尝试一下如何管理图像&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/.io//%E8%A2%81%E9%9A%86%E5%B</summary>
+      
+    
+    
+    
+    
+    <category term="image insert, markdobe" scheme="https://lymanzhang.github.io/tags/image-insert-markdobe/"/>
+    
+  </entry>
   
   <entry>
     <title>东昌葫芦构想</title>
