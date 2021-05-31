@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;lymanzhang.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="不重构，无未来：拥抱数据驱动的智能+新时代伴随着新一代信息通信技术（以互联网、大数据、人工智能、5G为代表）的持续创新和渗透扩散，新一轮工业革命正在全球范围孕育兴起，制造业正迈向体系重构、动力变革、范式迁移的新阶段，加速向数字化、网络化、智能化方向延伸扩展，万物互联、数据驱动、软件定义、平台支撑、组织重构、智能主导正在构建制造业的新体系，它也成为了全球新一轮产业竞争的制高点。 体系重构 （1）谁来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="newStep">
+<meta property="og:url" content="https://lymanzhang.github.io/2021/05/22/newStep/index.html">
+<meta property="og:site_name" content="Bit2Atom">
+<meta property="og:description" content="不重构，无未来：拥抱数据驱动的智能+新时代伴随着新一代信息通信技术（以互联网、大数据、人工智能、5G为代表）的持续创新和渗透扩散，新一轮工业革命正在全球范围孕育兴起，制造业正迈向体系重构、动力变革、范式迁移的新阶段，加速向数字化、网络化、智能化方向延伸扩展，万物互联、数据驱动、软件定义、平台支撑、组织重构、智能主导正在构建制造业的新体系，它也成为了全球新一轮产业竞争的制高点。 体系重构 （1）谁来">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-22T13:53:53.000Z">
+<meta property="article:modified_time" content="2021-05-31T13:40:47.205Z">
+<meta property="article:author" content="lymanzhang">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lymanzhang.github.io/2021/05/22/newStep/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;lymanzhang.github.io&#x2F;2021&#x2F;05&#x2F;22&#x2F;newStep&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;22&#x2F;newStep&#x2F;&quot;,&quot;title&quot;:&quot;newStep&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>newStep | Bit2Atom</title><script src="/js/config.js"></script>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?9807466c63f86bc9ba109febaa931a18"></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Bit2Atom" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Bit2Atom</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bit2Atom Design Intelligence</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E9%87%8D%E6%9E%84%EF%BC%8C%E6%97%A0%E6%9C%AA%E6%9D%A5%EF%BC%9A%E6%8B%A5%E6%8A%B1%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E7%9A%84%E6%99%BA%E8%83%BD-%E6%96%B0%E6%97%B6%E4%BB%A3"><span class="nav-number">1.</span> <span class="nav-text">不重构，无未来：拥抱数据驱动的智能+新时代</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lymanzhang"
+      src="/images/header.png">
+  <p class="site-author-name" itemprop="name">lymanzhang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lymanzhang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lymanzhang" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lymanzhang.github.io/2021/05/22/newStep/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.png">
+      <meta itemprop="name" content="lymanzhang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bit2Atom">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          newStep
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-22 21:53:53" itemprop="dateCreated datePublished" datetime="2021-05-22T21:53:53+08:00">2021-05-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-31 21:40:47" itemprop="dateModified" datetime="2021-05-31T21:40:47+08:00">2021-05-31</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="不重构，无未来：拥抱数据驱动的智能-新时代"><a href="#不重构，无未来：拥抱数据驱动的智能-新时代" class="headerlink" title="不重构，无未来：拥抱数据驱动的智能+新时代"></a>不重构，无未来：拥抱数据驱动的智能+新时代</h1><p>伴随着<strong>新一代信息通信技术</strong>（以互联网、大数据、人工智能、5G为代表）的持续创新和渗透扩散，新一轮工业革命正在全球范围孕育兴起，制造业正迈向<strong>体系重构</strong>、<strong>动力变革</strong>、<strong>范式迁移</strong>的新阶段，加速向<strong>数字化</strong>、<strong>网络化</strong>、<strong>智能化</strong>方向延伸扩展，<strong>万物互联</strong>、<strong>数据驱动</strong>、<strong>软件定义</strong>、<strong>平台支撑</strong>、<strong>组织重构</strong>、<strong>智能主导</strong>正在构建制造业的新体系，它也成为了全球新一轮产业竞争的制高点。</p>
+<p><strong>体系重构</strong></p>
+<p>（1）谁来生产（Who）在变：<strong>生产主体</strong>从生产者向产消者Prosumer演进，个性化定制模式的兴起让消费者全程参与到生产过程中；（2）生产什么（What）在变：<strong>生产对象</strong>从功能产品向智能互联产品演进，可动态感知并实时响应消费需求的无人驾驶、服务机器人等智能化产品的商业化步伐不断加快；（3）用何工具（Which）在变：<strong>生产工具</strong>从以工业社会传统的以能量转换为特征的工具向智能工具演进，即具备对信息进行采集、传输、处理、执行的工具，3D打印、数控机床、智能机器人等智能装备快速涌现；（4）如何生产（How）在变：<strong>生产方式</strong>从传统制造的“试错法”向基于数字仿真的“模拟择优法”转变，构建制造业快速迭代、持续优化、数据驱动的新生产方式；（5）在哪生产（Where）在变：网络化协同制造、分享制造等制造业新模式推动<strong>生产地点</strong>从集中化走向分散化，跨部门、跨企业、跨地域的协同成为常态，尤其是分享制造的发展，构建起了检测、加工、认证、配送等制造能力标准化封装、在线化交易的新体系，推动制造能力在全社会范围内进行协同。</p>
+<p><strong>动力变革</strong></p>
+<p>制造业迈向转型升级的新阶段——数据驱动的新阶段。（1）资源优化是目标，即不断优化制造资源的配置效率，就是要实现更好的质量、更低的成本、更快的交付、更高的满意度，就是要提高制造业全要素生产率；（2）数据流动是关键，即能够把正确的数据在正确的时间以正确的方式传递给正确的人和机器，把数据转化为信息，把信息转化为知识，把知识转化为决策，以信息流带动技术流、资金流、人才流、物资流，以应对和解决制造过程的复杂性和不确定性等问题，提高制造资源的配置效率；（3）工业软件是核心，软件本质上是人类隐形知识显性化的载体，是一套数据自动流动的规则体系。</p>
+<p><strong>范式迁移</strong></p>
+<p>制造范式指在一定时期、在特定技术条件下对制造业价值观、方法论、发展模式和运行规律的认识框架。人类认识和改造世界的方法正从传统的理论推理（以牛顿定律、爱因斯坦相对论为代表，以“观察+抽象+数学”为关键要素，是人类认识世界最根本的方法，依赖于少数天才科学家，具备严密的逻辑关系，是试验验证和模拟择优的基础）、试验验证（以爱迪生发明灯泡为代表，以“假设+试验+归纳”为关键要素，依赖于设备材料的高投入，实验过程大协作、长周期，验证结果直观）向模拟择优（以波音777研发为代表，以“样本数据+机理模型”为关键要素，依赖于高质量机理模型的支撑，和传统试错法相比，投入少、周期短，可推动产品研发、验证、制造、服务业务在赛博空间的快速迭代，实现更短的研发周期、更低的制造成本、更高的产品质量和更好的客户体验）和大数据分析（以GE通过平台优化风电设备性能为代表，以“海量数据+大数据分析模型”为关键要素，依赖于海量数据的获取，以及计算、存储资源的低成本和高效利用，是一种基于数据驱动的价值创造范式）转变。</p>
+<p><strong>智能制造和工业互联网</strong></p>
+<p>20世纪80年代提出的智能制造和2012年提出的工业互联网是面对制造转型升级需求，基于不同时代的技术体系、需求结构、竞争结局提出的解决方案，既有联系又有区别，从智能制造和工业互联网，是<strong>信息技术体系从传统架构向云架构的迁移</strong>，是<strong>制造资源从局部优化到全局优化的演进</strong>，是<strong>业务协同从企业内部到产业链的扩展</strong>，是<strong>竞争模式从单一企业竞争到生态体系竞争的升级</strong>，是<strong>产业分工从基于产品的分工到基于知识的分工深化</strong>，但其内在逻辑是一致的——<strong>以数据的自动流动化解复杂系统的不确定性</strong>。</p>
+<p><strong>重构</strong></p>
+<p>（1）思维重构：以大视野、大科学、大融合维度视角，审视新一轮科技革命和产业变革机理，打通穿透数字化转型的技术、产业、经济、商业、政策的语境与逻辑，在数据+算法定义的世界中，探索<strong>升维思考</strong>之后的<strong>降维落地</strong>之路；（2）战略重构：数字化转型带来了工具革命和决策革命，人们要重新思考战略的形成、演化与落地；（3）技术重构：大科学、大技术交叉融合的时代，技术体系的解耦、分化、再封装正在构建新技术体系，如何洞察技术变局，以OT与IT融合、云架构升级、微服务落地，粉碎僵化开发模式和陈规桎梏，重建技术支撑体系；（4）能力重构：技术赋能时代，传统能力升级与新型能力培育相互交织激荡，企业竞争力体系正在加速重构；（5）组织重构：企业组织迎来了异常转基因工程，无边界的<strong>液态组织</strong>正在激活企业的内生动力。</p>
+<p><strong>智能制造的逻辑：从生产装备自动化到数据流动自动化</strong></p>
+<p>人类社会的发展史就是一部<strong>应对不确定性</strong>、<strong>寻求确定性</strong>的历史，克服对不确定性的恐惧是人类认知深化的重要动力，<strong>对客观世界的理解、预测、控制</strong>是人类化解不确定性恐惧的三步曲。信息的价值在于减少认知的不确定性，个性化定制、产品智能化、产业分工深化及竞争格局加剧不断提升制造系统的复杂性及生产过程的不确定性，<strong>智能制造的本质就在于以数据的自动流动化解复杂系统的不确定性，提高智能资源配置效率。</strong></p>
+<p><strong>智能制造的本质</strong></p>
+<p><strong>智能制造的本质在于以数据的自动流动化化解复杂制造系统的不确定性，优化制造资源配置效率。</strong></p>
+<p><strong>信息、不确定性与人类社会发展</strong></p>
+<p><strong>认知的分野：认知规律中的不确定性</strong></p>
+<p>（1） 哲学视角人们对客观世界的认知并非在确定性和不确定性之间二选一，而是两种思维方式在不断相互转化、交叉融合（灰度思维）。对于现实世界，人们的未知远大于已知，<strong>人类不懈追求认知的绝对确定性而逐步显现出其不确定性</strong>。（2） 科学视角以牛顿三大定律和万有引力定律为核心的牛顿力学作为经典科学，完美地解释了确定性运动学规律和现象。由此而来，近现代科学成就不断强化人们基于确定性逻辑规律的认知，人们不自觉地把科学性和确定性等同起来。对不确定性的重新认识，是现代科学对于人类思想的重要贡献，是20世纪的重大进步。海森堡的测不准原则、哥德尔的不完全性定力、阿罗的社会选择理论、埃弗雷特的平行宇宙理论等不确定性的发现，促使我们的观念发生了根本变化。（<strong>用科学的理论认识总结这种不确定性，是区别被动接受和主动接受不确定性的判据，是不确定性和确定性的融合</strong>）（3） 经济学视角经济学通过研究人的经济行为来分析经济现象，又将人的行为过程描述为决策过程，经济学的一个基本问题是在不确定性条件下人们的决策原则是什么。1972年诺贝尔经济学奖获得者阿罗认为，所谓信息就是根据条件概率原则有效地改变概率的任何观察结果，<strong>不确定就意味着成本，信息的价值就在于降低了经济的不确定性</strong>。</p>
+<p><strong>信息的价值：减少认知的不确定性</strong></p>
+<p>香农在论文《通信的数学理论》中指出：<strong>信息是用来减少随机不确定性的东西，信息的价值是确定性的增加</strong>。<strong>信息就是两次不确定性之差</strong>，<strong>信息就是传递中的知识差</strong>。</p>
+<p><strong>社会的演进：基于信息能力拓展的分工与协作</strong></p>
+<p>工业革命孕育的市场经济本质是如何在高度不确定性的环境中实现科学决策，哈耶克（1974年诺贝尔经济学奖获得者）认为，<strong>市场经济就是一个信息处理系统</strong>，大量独立个体通过价格发现机制，基于各种有限、当地化、碎片化的信息进行决策，优化资源配置。进入数字经济时代，人类大规模协作的广度、深度、频率进入了一个新阶段，企业边界正在被重新定义，科层组织正在被瓦解，产消者不断涌现，微粒社会正在来临，平台经济体迅速崛起，人类社会已经从工业社会百万人量级的协作生产体系演进到数千万、数亿人的合作，这也带来了产业分工不断深化。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/22/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/22/%E8%91%AB%E8%8A%A6%E6%B0%B4%E8%BD%AC%E5%8D%B0%E5%AE%9A%E5%BD%A9/" rel="next" title="基于水转印工艺的图案设计及配套设施">
+                  基于水转印工艺的图案设计及配套设施 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div><script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lymanzhang</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">7k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{&quot;enable&quot;:true,&quot;github_id&quot;:&quot;lymanzhang&quot;,&quot;repo&quot;:&quot;lymanzhang.github.io&quot;,&quot;client_id&quot;:&quot;fe6b4cd4f47281114081&quot;,&quot;client_secret&quot;:&quot;ccb6e02cad8ca6805e0f75b53891aa9178ab8d75&quot;,&quot;admin_user&quot;:&quot;lymanzhang&quot;,&quot;distraction_free_mode&quot;:true,&quot;proxy&quot;:&quot;https:&#x2F;&#x2F;cors-anywhere.azm.workers.dev&#x2F;https:&#x2F;&#x2F;github.com&#x2F;login&#x2F;oauth&#x2F;access_token&quot;,&quot;language&quot;:&quot;zh-CN&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1.7.2&#x2F;dist&#x2F;gitalk.min.js&quot;,&quot;integrity&quot;:&quot;sha256-Pmj85ojLaPOWwRtlMJwmezB&#x2F;Qg8BzvJp5eTzvXaYAfA&#x3D;&quot;},&quot;path_md5&quot;:&quot;c3c4dba017c8b957de5e80bfc0427204&quot;}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

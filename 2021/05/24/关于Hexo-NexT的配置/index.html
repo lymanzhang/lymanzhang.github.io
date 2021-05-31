@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;lymanzhang.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="关于Hexo + NexT的配置一、参考资源本静态网站的部署主要参考了下文： 鱼先生发布于 2019-01-22的“超详细Hexo+Github Page搭建技术博客教程【持续更新】” 因为原来已经有了GitHub账户，因此相对简单一些，配置主要涉及到了：  准备 node 和 git 环境 安装 Hexo 配置 SSH key 部署到 Github 主题配置 添加gitalk评论系统 配置腾讯公">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Hexo + NexT的配置">
+<meta property="og:url" content="https://lymanzhang.github.io/2021/05/24/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Bit2Atom">
+<meta property="og:description" content="关于Hexo + NexT的配置一、参考资源本静态网站的部署主要参考了下文： 鱼先生发布于 2019-01-22的“超详细Hexo+Github Page搭建技术博客教程【持续更新】” 因为原来已经有了GitHub账户，因此相对简单一些，配置主要涉及到了：  准备 node 和 git 环境 安装 Hexo 配置 SSH key 部署到 Github 主题配置 添加gitalk评论系统 配置腾讯公">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/lymanzhanggithubio.PNG">
+<meta property="article:published_time" content="2021-05-24T15:45:42.000Z">
+<meta property="article:modified_time" content="2021-05-31T13:39:12.618Z">
+<meta property="article:author" content="lymanzhang">
+<meta property="article:tag" content="hexo, next, 配置">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/lymanzhanggithubio.PNG">
+
+
+<link rel="canonical" href="https://lymanzhang.github.io/2021/05/24/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;lymanzhang.github.io&#x2F;2021&#x2F;05&#x2F;24&#x2F;%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;24&#x2F;关于Hexo-NexT的配置&#x2F;&quot;,&quot;title&quot;:&quot;关于Hexo + NexT的配置&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>关于Hexo + NexT的配置 | Bit2Atom</title><script src="/js/config.js"></script>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?9807466c63f86bc9ba109febaa931a18"></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Bit2Atom" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Bit2Atom</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bit2Atom Design Intelligence</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">关于Hexo + NexT的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">一、参考资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">二、其他资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83"><span class="nav-number">1.3.</span> <span class="nav-text">三、博客编写规范</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lymanzhang"
+      src="/images/header.png">
+  <p class="site-author-name" itemprop="name">lymanzhang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lymanzhang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lymanzhang" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lymanzhang.github.io/2021/05/24/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.png">
+      <meta itemprop="name" content="lymanzhang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bit2Atom">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于Hexo + NexT的配置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-24 23:45:42" itemprop="dateCreated datePublished" datetime="2021-05-24T23:45:42+08:00">2021-05-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-31 21:39:12" itemprop="dateModified" datetime="2021-05-31T21:39:12+08:00">2021-05-31</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="关于Hexo-NexT的配置"><a href="#关于Hexo-NexT的配置" class="headerlink" title="关于Hexo + NexT的配置"></a>关于Hexo + NexT的配置</h2><h3 id="一、参考资源"><a href="#一、参考资源" class="headerlink" title="一、参考资源"></a>一、参考资源</h3><p>本静态网站的部署主要参考了下文：</p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/u/yuxiansheng"><strong>鱼先生</strong></a>发布于 2019-01-22的“<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017986794">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a>”</p>
+<p>因为原来已经有了GitHub账户，因此相对简单一些，配置主要涉及到了：</p>
+<ul>
+<li>准备 node 和 git 环境</li>
+<li>安装 Hexo</li>
+<li>配置 SSH key</li>
+<li>部署到 Github</li>
+<li>主题配置</li>
+<li>添加gitalk评论系统</li>
+<li>配置腾讯公益404页面</li>
+<li>添加字数统计和阅读时长</li>
+<li>开启fancybox</li>
+<li>百度站长平台添加网站管理</li>
+<li>添加百度统计</li>
+</ul>
+<p>等方面的配置。</p>
+<p>当前的结果如下图所示：</p>
+<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/lymanzhanggithubio.PNG" alt="lymanzhanggithubio"></p>
+<p>目前还有绑定域名、SEO优化、添加sitemap站点地图、添加蜘蛛协议、自动推送、主动推送、sitemap、手动提交等不少功能需要进行配置。留待后续抽时间完成。</p>
+<h3 id="二、其他资源"><a href="#二、其他资源" class="headerlink" title="二、其他资源"></a>二、其他资源</h3><p>其他部分设置还参考了以下一些资源：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43941364">硕子鸽</a> 2020-02-03 10:00:44的帖子<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43941364/article/details/104138726">Hexo搭建个人博客网站</a></p>
+<p>对next主题页面生成、站内搜索的实现、个人头像设置、RSS订阅设置、社交栏设置、实现侧边栏页面的圆角、为文章中的代码块增加一键复制功能、增加站点访问人数和总访问量、增加网易云音乐、部署到阿里云等有更加详细的配置说明。</p>
+<p><a target="_blank" rel="noopener" href="https://io-oi.me/">reuixiy</a>发表的<a target="_blank" rel="noopener" href="https://io-oi.me/tech/hexo-next-optimization/">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a>以及<a target="_blank" rel="noopener" href="http://shenzekun.cn/"><strong>Moorez</strong></a>发表的<a target="_blank" rel="noopener" href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html">hexo的next主题个性化教程:打造炫酷网站</a>也有更多详细的介绍，值得仔细研读。</p>
+<h3 id="三、博客编写规范"><a href="#三、博客编写规范" class="headerlink" title="三、博客编写规范"></a>三、博客编写规范</h3><p>基于markdown编写博客并发布时需要遵循hexo关于Front-matter 和页面变量的规范。如果自己直接新建markdown文件，一定要记得加上文件最上方的参数，即下面的相关内容，还有编码请用 UTF-8。</p>
+<p>关于文件最上方的参数，参见网友们对 Hexo 官方文档的 Front-matter 和页面变量定义规范的总结：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># ！！！！！！！！！！</span></span><br><span class="line"><span class="section"># 每一项的 : 后面均有一个空格</span></span><br><span class="line"><span class="section"># 且 : 为英文符号</span></span><br><span class="line"><span class="section"># ！！！！！！！！！！</span></span><br><span class="line"></span><br><span class="line">title:</span><br><span class="line"><span class="section"># 文章标题，可以为中文</span></span><br><span class="line"></span><br><span class="line">date:</span><br><span class="line"><span class="section"># 建立日期，如果自己手动添加，请按固定格式</span></span><br><span class="line"><span class="section"># 就算不写，页面每篇文章顶部的发表于……也能显示</span></span><br><span class="line"><span class="section"># 只要在主题配置文件中，配置了 created<span class="emphasis">_at 就行</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 那为什么还要自己加上？</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 自定义文章发布的时间</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">updated:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 更新日期，其它与上面的建立日期类似</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 不过在页面每篇文章顶部，是更新于……</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 在主题配置文件中，是 updated_</span>at</span></span><br><span class="line"></span><br><span class="line">permalink:</span><br><span class="line"><span class="section"># 若站点配置文件下的 permalink 配置了 title</span></span><br><span class="line"><span class="section"># 则可以替换文章 URL 里面的 title（文章标题）</span></span><br><span class="line"></span><br><span class="line">categories:</span><br><span class="line"><span class="section"># 分类，支持多级，比如：</span></span><br><span class="line"><span class="section"># - technology</span></span><br><span class="line"><span class="section"># - computer</span></span><br><span class="line"><span class="section"># - computer-aided-art</span></span><br><span class="line"><span class="section"># 则为 technology/computer/computer-aided-art</span></span><br><span class="line"><span class="section"># （不适用于 layout: page）</span></span><br><span class="line"></span><br><span class="line">tags:</span><br><span class="line"><span class="section"># 标签</span></span><br><span class="line"><span class="section"># 多个可以这样写 [标签1,标签2,标签3]</span></span><br><span class="line"><span class="section"># （不适用于 layout: page）</span></span><br><span class="line"></span><br><span class="line">description:</span><br><span class="line"><span class="section"># 文章的描述，在每篇文章标题下方显示</span></span><br><span class="line"><span class="section"># 并且作为网页的 description 元数据</span></span><br><span class="line"><span class="section"># 如果不写，则自动取 &lt;!-- more --&gt;</span></span><br><span class="line"><span class="section"># 之前的文字作为网页的 description 元数据</span></span><br><span class="line"></span><br><span class="line">keywords:</span><br><span class="line"><span class="section"># 关键字，并且作为网页的 keywords 元数据</span></span><br><span class="line"><span class="section"># 如果不写，则自动取 tags 里的项</span></span><br><span class="line"><span class="section"># 作为网页的 keywords 元数据</span></span><br><span class="line"></span><br><span class="line">comments:</span><br><span class="line"><span class="section"># 是否开启评论</span></span><br><span class="line"><span class="section"># 默认值是 true</span></span><br><span class="line"><span class="section"># 要关闭写 false</span></span><br><span class="line"></span><br><span class="line">layout:</span><br><span class="line"><span class="section"># 页面布局，默认值是 post，默认值可以在</span></span><br><span class="line"><span class="section"># 站点配置文件中修改 default<span class="emphasis">_layout</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 另：404 页面可能用到，将其值改为 false</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">type:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># categories，目录页面</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># tags，标签页面</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># picture，用来生成 group-pictures</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># quote？</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># https://io-oi.me/tech/hello-world/</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">photos:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># Gallery support，用来支持画廊╱相册，用法如下：</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># - photo_</span>url<span class="emphasis">_1</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># - photo_</span>url<span class="emphasis">_2</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># - photo_</span>url<span class="emphasis">_3</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># https://io-oi.me/tech/hello-world/</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">link:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 文章的外部链接</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># https://io-oi.me/tech/hello-world/</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">image:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 自定义的文章摘要图片，只在页面展示，文章内消失</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 此项只有参考本文 5.14 节配置好，否则请勿添加！</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">sticky:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 文章置顶</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 此项只有参考本文 5.15 节配置好，否则请勿添加！</span></span></span><br><span class="line"><span class="emphasis"><span class="section"></span></span></span><br><span class="line"><span class="emphasis"><span class="section">password:</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 文章密码，此项只有参考教程：</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># http://shenzekun.cn/hexo的next主题个性化配置教程.html</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 第 24 节，配置好，否则请勿添加！</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 发现还是有 bug 的，就是右键在新标签中打开</span></span></span><br><span class="line"><span class="emphasis"><span class="section"># 然后无论是否输入密码，都能看到内容</span></span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/hexo-next-%E9%85%8D%E7%BD%AE/" rel="tag"># hexo, next, 配置</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/24/testImageInsert/" rel="prev" title="testImageInsert">
+                  <i class="fa fa-chevron-left"></i> testImageInsert
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/28/scribblePaints/" rel="next" title="scribblePaints">
+                  scribblePaints <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div><script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lymanzhang</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">7k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{&quot;enable&quot;:true,&quot;github_id&quot;:&quot;lymanzhang&quot;,&quot;repo&quot;:&quot;lymanzhang.github.io&quot;,&quot;client_id&quot;:&quot;fe6b4cd4f47281114081&quot;,&quot;client_secret&quot;:&quot;ccb6e02cad8ca6805e0f75b53891aa9178ab8d75&quot;,&quot;admin_user&quot;:&quot;lymanzhang&quot;,&quot;distraction_free_mode&quot;:true,&quot;proxy&quot;:&quot;https:&#x2F;&#x2F;cors-anywhere.azm.workers.dev&#x2F;https:&#x2F;&#x2F;github.com&#x2F;login&#x2F;oauth&#x2F;access_token&quot;,&quot;language&quot;:&quot;zh-CN&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1.7.2&#x2F;dist&#x2F;gitalk.min.js&quot;,&quot;integrity&quot;:&quot;sha256-Pmj85ojLaPOWwRtlMJwmezB&#x2F;Qg8BzvJp5eTzvXaYAfA&#x3D;&quot;},&quot;path_md5&quot;:&quot;99d6faa5e5633da9905e02edca24ca19&quot;}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
