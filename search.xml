@@ -49,13 +49,13 @@
     <title>scribblePaints</title>
     <url>/2021/05/28/scribblePaints/</url>
     <content><![CDATA[<h2 id="scribblePaints"><a href="#scribblePaints" class="headerlink" title="scribblePaints"></a>scribblePaints</h2><p>通过图像处理得到类似手绘线描的效果。</p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/huawei_scribbledraw.PNG" alt="huaweiScribbleDraw"></p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/xuwei_01.png" alt="xuwei"></p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/xuwei_scribbledraw.png" alt="xuweiScribbleDraw"></p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/yuanlongping-1wt.jpg" alt="yuanlongping"></p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/yuanlongping_scribbledraw.png" alt="yuanlongpingScribbleDraw"></p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/hikking.png" alt="hikking"></p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/scribblePaints/hikking_scribbledraw.png" alt="hikkingScribbleDraw"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/huawei_scribbledraw.PNGdraw.PNG" alt="huaweiScribbleDraw"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/xuwei_01.png" alt="xuwei"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/xuwei_scribbledraw.png" alt="xuweiScribbleDraw"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/yuanlongping-1wt.jpg" alt="yuanlongping"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/yuanlongping_scribbledraw.png" alt="yuanlongpingScribbleDraw"></p>
+<p><img src="D:/+研发笔记+/hikking.phttps://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/hikking.png" alt="hikking"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/scribblePaints/hikking_scribbledraw.png" alt="hikkingScribbleDraw"></p>
 ]]></content>
       <tags>
         <tag>scribble draw, paint, line art, curve art</tag>
@@ -65,7 +65,7 @@
     <title>testImageInsert</title>
     <url>/2021/05/24/testImageInsert/</url>
     <content><![CDATA[<h3 id="管理图像"><a href="#管理图像" class="headerlink" title="管理图像"></a>管理图像</h3><p>本文主要是尝试一下如何管理图像</p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/testImageInsert/yuanlongping.PNG" alt="yuanlongping"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/testImageInsert/yuanlongping.PNG" alt="yuanlongping"></p>
 ]]></content>
       <tags>
         <tag>image insert, markdobe</tag>
@@ -174,7 +174,7 @@
 </ul>
 <p>等方面的配置。</p>
 <p>当前的结果如下图所示：</p>
-<p><img src="https://github.com/lymanzhang/lymanzhang.github.io/blob/master/ioImagesFolder/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/lymanzhanggithubio.PNG" alt="lymanzhanggithubio"></p>
+<p><img src="https://github.com/lymanzhang/lymanzhangGithubioImagePool/blob/main/%E5%85%B3%E4%BA%8EHexo-NexT%E7%9A%84%E9%85%8D%E7%BD%AE/lymanzhanggithubio.PNG" alt="lymanzhanggithubio"></p>
 <p>目前还有绑定域名、SEO优化、添加sitemap站点地图、添加蜘蛛协议、自动推送、主动推送、sitemap、手动提交等不少功能需要进行配置。留待后续抽时间完成。</p>
 <h3 id="二、其他资源"><a href="#二、其他资源" class="headerlink" title="二、其他资源"></a>二、其他资源</h3><p>其他部分设置还参考了以下一些资源：</p>
 <p><a href="https://blog.csdn.net/weixin_43941364">硕子鸽</a> 2020-02-03 10:00:44的帖子<a href="https://blog.csdn.net/weixin_43941364/article/details/104138726">Hexo搭建个人博客网站</a></p>
